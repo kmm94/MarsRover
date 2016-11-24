@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace MarsRover.Model
 {
-    class Field
+    public class Field
     {
         public FieldType type { get; set; }
         public Image image { get; set; }

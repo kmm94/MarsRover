@@ -1,6 +1,6 @@
 ﻿namespace MarsRover.Model.DataType
 {
-    enum Direction
+    public enum Direction
     {
         N, E, S, W
     }

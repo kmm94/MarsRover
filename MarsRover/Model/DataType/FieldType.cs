@@ -1,6 +1,6 @@
 ﻿namespace MarsRover.Model.DataType
 {
-    enum FieldType
+    public enum FieldType
     {
         STONE, DIRT, EXIT
     }

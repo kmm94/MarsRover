@@ -2,7 +2,7 @@
 
 namespace MarsRover.Model
 {
-    class World
+    public class World
     {
         public Field[,] map;
         public int size { get; set; } // HxB

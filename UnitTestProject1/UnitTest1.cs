@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MarsRover;
+using MarsRover.Controller;
+using MarsRover.Model;
+using MarsRover.Model.DataType;
 
 namespace MarsRoverTest
 {
@@ -10,7 +12,8 @@ namespace MarsRoverTest
         [TestMethod]
         public void RoverRunsIntoDirt()
         {
-
+            Assert.AreEqual(Rover.Instance.ScanField(new Field(FieldType.DIRT,0,0)),FieldType.DIRT);
         }
+
     }
 }

@@ -8,7 +8,7 @@ using MarsRover.Exception;
 
 namespace MarsRover.Model
 {
-    class Rover : IRover
+    public class Rover : IRover
     {
         public int x { get; set; } //x koordinater    
         public int y { get; set; } //y koordinater 
