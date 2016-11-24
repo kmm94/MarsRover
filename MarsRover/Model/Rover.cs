@@ -53,7 +53,7 @@ namespace MarsRover.Model
             {
                 return f;
             }
-            throw new FieldNotClearException();
+            throw new FieldNotClearException(); //her thrower den en exption når man køre ind i noget
         }
 
         public void Turn(Direction d)

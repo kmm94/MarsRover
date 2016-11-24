@@ -91,7 +91,7 @@ namespace MarsRover.Controller
                         }
                         catch (FieldNotClearException ex)
                         {
-
+                            
                         }
                     }
                     break;
