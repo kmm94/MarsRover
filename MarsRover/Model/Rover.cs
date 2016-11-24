@@ -55,10 +55,12 @@ namespace MarsRover.Model
                 return f;
             }
             else
-            {              
-                y = 0;
-                x = 0;
-                MessageBoxResult confirmation = MessageBox.Show("ugyldit move", "Fejl", MessageBoxButton.OK, MessageBoxImage.Warning);
+            {
+                int lastXPoint = x;
+                int lastYPoint = y;
+                y = 20;
+                x = 20;
+                MessageBoxResult confirmation = MessageBox.Show("ugyldit move på" + " X: " + lastXPoint +" Y: " + lastYpoint, "Fejl", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             return null;
         }
