@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Windows.Input;
 using MarsRover.Exception;
 using MarsRover.Model;
@@ -20,7 +21,7 @@ namespace MarsRover.Controller
         /// <param name="e"></param>
         public void KeyboardHandler(KeyEventArgs e)
         {
-
+         
             switch (e.Key) // her vælger man hvilken vej billede vender
             {
                 case Key.L:
@@ -91,8 +92,9 @@ namespace MarsRover.Controller
                         }
                         catch (FieldNotClearException ex)
                         {
-                            
-                        }
+
+ 
+                         }
                     }
                     break;
                 }
@@ -124,7 +126,7 @@ namespace MarsRover.Controller
                             }
                             catch (FieldNotClearException ex)
                             {
-
+                                MessageBoxResult confirmation = MessageBox.Show("ugyldit move", "Fejl", MessageBoxButton.OK, MessageBoxImage.Warning);
                             }
                         }
                         break;
@@ -138,11 +140,13 @@ namespace MarsRover.Controller
                     {
                         Rover.Instance.MoveUsingCommandList(commands, this.world);
                     }
-                    catch (InvalidMoveException ex)
+                   
+                        catch (InvalidMoveException ex)
                     {
 
                     }
-                    catch (FieldNotClearException ex)
+
+                        catch (FieldNotClearException ex)
                     {
 
                     }

@@ -3,6 +3,7 @@ using MarsRover.Model.DataType;
 using System.Windows.Media;
 using Image = System.Windows.Controls.Image;
 using System;
+using System.Windows;
 using MarsRover.Exception;
 
 namespace MarsRover.Model
@@ -53,7 +54,13 @@ namespace MarsRover.Model
             {
                 return f;
             }
-            throw new FieldNotClearException(); //her thrower den en exption når man køre ind i noget
+            else
+            {              
+                y = 0;
+                x = 0;
+                MessageBoxResult confirmation = MessageBox.Show("ugyldit move", "Fejl", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            return null;
         }
 
         public void Turn(Direction d)
