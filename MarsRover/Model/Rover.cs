@@ -50,11 +50,11 @@ namespace MarsRover.Model
 
         public Field ScanField(Field f)
         {
-            if (f != null && (f.type == FieldType.DIRT || f.type == FieldType.EXIT))
+            if (f != null && f.type == FieldType.DIRT)
             {
                 return f;
             }
-            else if(f.type == FieldType.EXIT)
+            else if(f.type == FieldType.STONE)
             {
                 int lastXPoint = x; // point of error
                 int lastYPoint = y; // point of error
@@ -63,6 +63,8 @@ namespace MarsRover.Model
                 MessageBoxResult confirmation = MessageBox.Show("ugyldit move på" + " X: " + lastXPoint +" Y: " + lastYPoint, "Fejl", MessageBoxButton.OK, MessageBoxImage.Warning);
             } else if (f.type == FieldType.EXIT)
             {
+                y = 0;
+                x = 0;
                 MessageBoxResult confirmation = MessageBox.Show("Du har vundet", "victory", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
             return null;
