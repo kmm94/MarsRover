@@ -54,13 +54,16 @@ namespace MarsRover.Model
             {
                 return f;
             }
-            else
+            else if(f.type == FieldType.EXIT)
             {
-                int lastXPoint = x;
-                int lastYPoint = y;
-                y = 20;
-                x = 20;
-                MessageBoxResult confirmation = MessageBox.Show("ugyldit move på" + " X: " + lastXPoint +" Y: " + lastYpoint, "Fejl", MessageBoxButton.OK, MessageBoxImage.Warning);
+                int lastXPoint = x; // point of error
+                int lastYPoint = y; // point of error
+                y = 0; // last possible point
+                x = 0; // last possible point
+                MessageBoxResult confirmation = MessageBox.Show("ugyldit move på" + " X: " + lastXPoint +" Y: " + lastYPoint, "Fejl", MessageBoxButton.OK, MessageBoxImage.Warning);
+            } else if (f.type == FieldType.EXIT)
+            {
+                MessageBoxResult confirmation = MessageBox.Show("Du har vundet", "victory", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
             return null;
         }
