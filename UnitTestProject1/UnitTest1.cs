@@ -12,8 +12,12 @@ namespace MarsRoverTest
         [TestMethod]
         public void RoverRunsIntoDirt()
         {
-            Assert.AreEqual(Rover.Instance.ScanField(new Field(FieldType.DIRT,0,0)),FieldType.DIRT);
+            World w = new World(20);
+            Assert.AreEqual(Rover.Instance.ScanField(w.GetField(0,0)), w.GetField(0,0));
         }
+
+        public void
+
 
     }
 }
