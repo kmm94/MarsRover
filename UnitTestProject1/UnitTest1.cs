@@ -15,8 +15,12 @@ namespace MarsRoverTest
             World w = new World(20);
             Assert.AreEqual(Rover.Instance.ScanField(w.GetField(0,0)), w.GetField(0,0));
         }
-
-        public void
+        [TestMethod]
+        public void StartPos()
+        {
+            Assert.AreEqual(Rover.Instance.x, 0);
+            Assert.AreEqual(Rover.Instance.y, 0);
+        }
 
 
     }
